@@ -2,7 +2,7 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $dbname = "ck_web";
+    $dbname = "db";
     $password = "";
     $dsn_options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
