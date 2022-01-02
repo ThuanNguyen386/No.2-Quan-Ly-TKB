@@ -10,11 +10,11 @@
 </head>
 <body>
 <div class="container">
-    <form method="POST" id="forgot_pass" action="" >
+    <form class="form" method="POST" id="forgot_pass" action="" >
         <div class="row" align="center">
-            <span class="error">
+            <p class="error">
                 <?php echo $nameErr;?>
-            </span>
+            </p>
         </div>
         <div class="row">
             <div class="col-30" align="center">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Forgot Password</title>
+    <title>Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="web/password.css" rel="stylesheet" type="text/css">
+    <link href="web/css/password.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="container">
