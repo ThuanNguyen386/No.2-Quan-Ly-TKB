@@ -1,17 +1,17 @@
 # No.2-Quan-Ly-TKB
 ## Login/logout
-### Login/logout, màn hì?nh home
-### Reminder password/ c?p l?i password
-## Giáo viên
-### Tì?m ki?m, xem chi ti?t thông tin giáo viên
-### Thêm m?i giáo viên
-### S?a thông tin giáo viên
-## Môn h?c
-### Tì?m ki?m, xem chi ti?t thông tin môn h?c
-### Thêm m?i môn h?c
-### S?a thông tin môn h?c
-## Qu?n l? th?i khóa bi?u
-### Tì?m ki?m/filter th?i gian h?c c?a giáo viên ho?c môn h?c
-### L?p th?i khóa bi?u. (phân công giáo viên nào d?y môn nào vào th?i gian nào)
-### S?a th?i khóa bi?u.
-## Chú ?: H?n n?p bài là trı?c 7h sáng 9/1, nhóm ch? ğ?i di?n 1 ngı?i n?p.
+### Login/logout, mÃ n hÃ¬nh home
+### Reminder password/ cáº¥p láº¡i password
+## GiÃ¡o viÃªn
+### TÃ¬m kiáº¿m, xem chi tiáº¿t thÃ´ng tin giÃ¡o viÃªn
+### ThÃªm má»›i giÃ¡o viÃªn
+### Sá»­a thÃ´ng tin giÃ¡o viÃªn
+## MÃ´n há»c
+### TÃ¬m kiáº¿m, xem chi tiáº¿t thÃ´ng tin mÃ´n há»c
+### ThÃªm má»›i mÃ´n há»c
+### Sá»­a thÃ´ng tin mÃ´n há»c
+## Quáº£n lÃ½ thá»i khÃ³a biá»ƒu
+### TÃ¬m kiáº¿m/filter thá»i gian há»c cá»§a giÃ¡o viÃªn hoáº·c mÃ´n há»c
+### Láº­p thá»i khÃ³a biá»ƒu. (phÃ¢n cÃ´ng giÃ¡o viÃªn nÃ o dáº¡y mÃ´n nÃ o vÃ o thá»i gian nÃ o)
+### Sá»­a thá»i khÃ³a biá»ƒu.
+## ChÃº Ã½: Háº¡n ná»™p bÃ i lÃ  trÆ°á»›c 7h sÃ¡ng 9/1, nhÃ³m chá»‰ Ä‘áº¡i diá»‡n 1 ngÆ°á»i ná»™p.
