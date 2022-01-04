@@ -2,5 +2,5 @@
     $server ='localhost';
     $username ='root';
     $password ='admin';
-    $database ='cuoiky';
+    $database ='db';
 ?>
