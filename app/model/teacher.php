@@ -7,8 +7,11 @@ $specialized = ['MAT'=>"Toán tin", 'AST'=>"Thiên văn học", 'GEO'=>"Vật l�
 
     // lay thong tin giao vien
 	function getTeacher($str, $spec){
+		if ($str =='' && $spec=='' ){
+			$query = "SELECT * FROM `teachers` ORDER BY id DESC;";
+		}else{
         $query = "SELECT * FROM `teachers` WHERE (teachers.name LIKE '%".$str."%' OR teachers.description LIKE '%".$str."%' OR teachers.degree LIKE '%".$str."%') AND teachers.specialized ='".$spec."'";
-  
+  		}
         global $pdo;
         $statement = $pdo -> prepare($query) ;
         $statement -> execute();
