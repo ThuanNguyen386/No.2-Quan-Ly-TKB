@@ -13,8 +13,12 @@ body{
 	padding:3px 7px 3px 7px ;
 
 }
+.form2{
+	width: 50%;
+	margin:auto;
+}
 .te{
-	margin:auto;width: 50%;
+	margin:auto;
 	border: solid 2px #6f70d7; 
 	padding: 50px 30px 50px 30px;
 }
@@ -83,7 +87,9 @@ body{
     margin-bottom: var(--bs-gutter-y);
 }
 
-
+p{
+	padding-left: 50px;
+}
 
 table{
 		margin-bottom: 20px;
@@ -98,7 +104,7 @@ table{
 	th{
 		background-color: #a2a4f7;
 		border: solid 1px #000;
-		padding: 6px 40px 6px 10px;
+		padding: 6px 10px 6px 10px;
 		margin-bottom: 20px;
 		margin-right: 20px;
 		text-align: left;
@@ -106,7 +112,7 @@ table{
 	}
 	td{
 		border: solid 1px #000;
-		padding: 6px 40px 13px 10px;
+		padding: 6px 10px 13px 10px;
 		
 
 	}
