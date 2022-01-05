@@ -10,7 +10,7 @@
 			if($school_year != '' and $key != ''){
 				$subjects=getInfoSearch($school_year,$key)->fetchAll();
 			}else{
-				header("Location:subjects_search.php");
+				header("Location: subjects_search.php");
 			}
 			$count=getInfoSearch($school_year,$key)->rowCount();
 		}

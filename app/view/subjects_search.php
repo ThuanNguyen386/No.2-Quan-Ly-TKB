@@ -83,7 +83,7 @@
 											<td><?php echo $subjects['description']; ?></td>
 											<td>
 												<button style="background-color: #99CCFF; border: 1px solid #0078ED; margin-right: 5px; cursor: pointer;" name="delete">
-												<a onclick="return confirm('Bạn chắc chắn muốn xoá môn <?php echo $subjects['name']?>?')" style="text-decoration:none;" href="subjects_delete_controller.php?id=<?php echo $subjects['id'] ?>">Xóa</a></button>
+												<a onclick="return confirm('Bạn chắc chắn muốn xoá môn <?php echo $subjects['name']?>?')" style="text-decoration:none;" href="../controller/subjects_delete_controller.php?id=<?php echo $subjects['id'] ?>">Xóa</a></button>
 												
 												<button style="background-color: #99CCFF; border: 1px solid #0078ED;  margin-right: 5px; cursor: pointer;">
 												<a style="text-decoration:none;" href="edit.php?id=<?= $id?>">Sửa</a></button>
