@@ -1,5 +1,7 @@
 <?php
     require "../controller/password_reset_controller.php";
+    $listadmin= getLoginid();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,42 +11,40 @@
     <link href="../../web/css/password.css" rel="stylesheet">
 </head>
 <body>
+    
     <div class="container">
         <table>
             <thead>
                 <tr>
-                    <th>NO</th>
-                    <th>Tên người dùng</th>
-                    <th>Mật khẩu mới</th>
-                    <th>Action</th>
+                    <th class="no">NO</th>
+                    <th class="user">Tên người dùng</th>
+                    <th class="password">Mật khẩu mới</th>
+                    <th class="action" >Action</th>
                 </tr>
             </thead>
-            <?php 
-                $count=1;
-                foreach($statement as $row){
-            ?>
+              
             <tbody>
-                <form class="form" action="" method="POST"> 
+                <?php 
+                    for( $i = 0; $i<count($listadmin); $i++){
+                ?>
+                    <form class="form" action="" method="POST">
                     <tr>
-                        <td class="no"><?php echo $count;?></td>
-                        <td class="user"><?php echo $row[0];?></td>
-                        <td class="password"><input type="password" name="<?php echo $row[0] ; ?>" value ="<?php echo $new_password[$row[0]];?>">
-                        </td>
-                        <td class="action"><button class="button" >Reset</button></td>
+                        <td class="no"><?php echo $i+1 ?></td>
+                        <td class="user"><?php echo $listadmin[$i]->login_id ?></td>
+                        <td class="password"><input type="password" name="newpassword<?php echo $listadmin[$i]->id ?>"></td>
+                        <td class="action"><input type="submit" name="resetnewpw<?php echo $listadmin[$i]->id;?>" value="Reset"></td>
                     </tr>
                     <tr>
                         <td class="no"></td>
                         <td class="user"></td>
-                        <td class="error"><span><?php echo $error[$row[0]];?></td>
-                        <td class="action"></td>
+                        <td class="error"><span><?php echo $passErr[$listadmin[$i]->id];?></td>
+                    <td class="action"></td>
                     </tr>
-                </form>
-                    <?php
-                        $count++;
-                        }
-                    ?>
+                    </form>
+                <?php
+                    }
+                ?>
             </tbody>
-                    
         </table>
     </div>
 </body>
