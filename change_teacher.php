@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
+<link rel="stylesheet" href="./form_change_teacher.css">
 <form action="change_teacher_confirm.php" method="POST">
-    <label id="Name">Họ và Tên</label>
+    <label class="label" id="Name">Họ và Tên</label>
     <input type="text" name="Name" value=""><br>
-    <label id="Specialized">Bộ môn</label>
+    <label class="label "id="Specialized">Bộ môn</label>
     <select name="Specialized">
             <option value="0">None</option>
             <?php
@@ -13,7 +14,7 @@
             }
             ?>
     </select><br> 
-    <label id="Degree">Học vị</label>
+    <label class="label" id="Degree">Học vị</label>
     <select name="Degree">
             <option value="0">None</option>
             <?php
@@ -22,10 +23,10 @@
             }
             ?>
     </select><br> 
-    <label id="Avatar">Avatar</label>
+    <label class="label" id="Avatar">Avatar</label>
     <input type="image"><br>
     <input type="browse"><br>
-    <label id="Description">Mô tả thêm</label>
+    <label class="label" id="Description">Mô tả thêm</label>
     <input type="textarea" name="Description" value="">
     <input type="submit" name="Confirm" value="Xác nhận">
 </form>
