@@ -1,7 +1,7 @@
 <?php 
 
 //////////--tham dinh--//////////////////
-include('../common/connectdb.php');
+include('../common/db.php');
 
 
 $specialized = ['001'=>"Khoa học máy tính",'002'=>"Khoa học dữ liệu",'003'=>"Hải dương học"];
