@@ -3,7 +3,9 @@
 //////////--tham dinh--//////////////////
 include('../common/connectdb.php');
 
-$specialized = ['MAT'=>"Toán tin", 'AST'=>"Thiên văn học", 'GEO'=>"Vật lý địa cầu", 'CHE'=>"Hoá hữu cơ", 'BIO'=>"Sinh học"];
+
+$specialized = ['001'=>"Khoa học máy tính",'002'=>"Khoa học dữ liệu",'003'=>"Hải dương học"];
+$degree = ['001'=>"Cử nhân",'002'=>"Thạc sỹ",'003'=>"Tiến sỹ",'004'=>"Phó giáo sư",'005'=>"Giáo sư"];
 
     // lay thong tin giao vien
 	function getTeacher($str, $spec){
