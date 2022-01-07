@@ -1,6 +1,8 @@
 <?php
     require "../controller/password_reset_controller.php";
     $listadmin= getLoginid();
+	session_start();
+	
 
 ?>
 <!DOCTYPE html>
@@ -29,6 +31,7 @@
                 ?>
                     <form class="form" action="" method="POST">
                     <tr>
+						
                         <td class="no"><?php echo $i+1 ?></td>
                         <td class="user"><?php echo $listadmin[$i]->login_id ?></td>
                         <td class="password"><input type="password" name="newpassword<?php echo $listadmin[$i]->id ?>"></td>
@@ -46,9 +49,9 @@
                 ?>
             </tbody>
         </table>
-		<div class="element">
-                    <a href="../view/home.php"><?php $_SESSION['loggedin']= true?>Home</a>
-        </div>
+		<center><div class="element">
+                    <a href="../view/home.php"><?php $_SESSION['loggedIn']= 1?>Home</a>
+        </div></center>
     </div>
 </body>
 </html>

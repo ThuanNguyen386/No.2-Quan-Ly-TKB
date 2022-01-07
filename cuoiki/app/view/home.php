@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
-	require '../controller/home.php';
+	session_start();
+	require '../controller/login.php';
+	if($_SESSION['loggedIn'] != 1){
+		header("Location: ../view/login.php");
+	}
 ?>
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@
         <div class="form">
             <div class="main">
                 <div class="element">
-                    <p>Tên login: <?php echo $_SESSION['loggedin'];?></p>
+                    <p>Tên login: <?php echo $_SESSION['name'];?></p>
                 </div>
                 <div class="element">
                     <p>Thời gian login: <?php echo $_SESSION['time'];?>
@@ -44,7 +48,7 @@
                     <a href="../view/password_reset.php">Reset password</a>
                 </div>
                 <div class="element">
-                    <a href="../view/login.php"><?php $_SESSION['loggedin'] = 0 ?>Đăng xuất</a>
+                    <a href="../view/login.php"><?php $_SESSION['loggedIn'] = 0 ?>Đăng xuất</a>
                 </div>
             </div>
         </div>

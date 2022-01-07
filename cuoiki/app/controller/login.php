@@ -32,11 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($valid) {
 		$md5pass = md5($password);
         if (checkAdmin($name, $md5pass)) {
-			$_SESSION['loggedin'] = 1;
 			$_SESSION['name'] = $name;
-			header("Location: ../view/home.php");
+			$_SESSION['loggedIn'] = 1;
+			header("Location: ../view/home.php");	
         } else {
             $error = "login id và password không đúng";
         }
+		
     }
 }

@@ -28,7 +28,7 @@ require '../controller/login.php';
                     <input id="password" type="password" class="input-element" name="password">
                 </div>
                 <div class="element">
-                    <a href='../view/password_request.php'>Reset password</a>
+                    <a href='../view/password_request.php'>Quên password</a>
                 </div>
                 <div class="element">
                     <button type="submit" class="btn-submit" name= "login-submit">Đăng nhập</button>

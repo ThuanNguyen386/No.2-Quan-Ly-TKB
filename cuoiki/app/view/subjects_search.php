@@ -8,6 +8,7 @@
 <body>
 <!--model-->
 	<?php
+		session_start();
 		require('../controller/subjects_search_controller.php');
 	?>
 <!--controller-->
@@ -92,7 +93,7 @@
 								<?php } ?>
 						</table>
 						<div class="element">
-							<a href="../view/home.php"><?php $_SESSION['loggedin']= true?>Home</a>
+							<a href="../view/home.php"><?php $_SESSION['loggedIn'] = 1?>Home</a>
 						</div>
 					</div>
 				</div>
