@@ -1,7 +1,7 @@
 <?php 
 
 require_once "../view/search_teacher.php";
-require_once "../model/teacher.php";
+require_once "../model/teacher_search_model.php";
 $spec =  "";
 
 if (isset($_GET["str"]) && isset($_GET["spec"])) {  

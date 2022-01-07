@@ -1,5 +1,5 @@
 <?php
-	require_once "../model/teacher.php";
+	require_once "../model/teacher_search_model.php";
 	$spec = $_GET["spec"];
 	$str = $_GET["str"]; 
 
