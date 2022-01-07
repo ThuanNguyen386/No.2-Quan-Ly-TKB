@@ -46,5 +46,18 @@ include('../common/db.php');
         return $subject[0]['avatar'];
     }
 
-    // print_r(explode(",",getSubject(1)['school_year']));
+    function getInfoSearch($school_year, $key){
+		global $pdo;
+		$sql = "SELECT * FROM `subjects` where (school_year='" . $school_year . "') and (name LIKE '%" . $key . "%' or description LIKE '%" . $key . "%');";
+		$stm = $pdo ->prepare($sql);
+		$stm -> execute();
+		return $stm;
+	}
+	
+	function deleteSubject($id){
+		global $pdo;
+		$sql="DELETE FROM `subjects` where id=" . $id . ";";
+		$stm = $pdo ->prepare($sql);
+		return $stm -> execute();
+	}
 ?>

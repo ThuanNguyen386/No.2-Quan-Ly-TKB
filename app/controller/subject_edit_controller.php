@@ -3,7 +3,8 @@
         @ob_start();
         session_start();
     }
-    
-    $_SESSION['id'] = 2;
+    if (isset($_GET['id'])){
+        $_SESSION['id'] = $_GET['id'];
+    }
     require_once('./subject_edit_input_controller.php');
 ?>

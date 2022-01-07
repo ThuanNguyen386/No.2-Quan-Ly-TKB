@@ -1,5 +1,5 @@
 <?php
-	require('../model/subjects_search_model.php');
+	require('../model/subject.php');
 	$id=$_GET['id'];
 	$result=deleteSubject($id);
 	if($result){

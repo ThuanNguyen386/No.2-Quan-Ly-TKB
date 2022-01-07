@@ -1,5 +1,5 @@
 <?php
-	require('../model/subjects_search_model.php');
+	require('../model/subject.php');
 	$school_year='';
 	$key='';
 	$subjects=getInfoSearch($school_year,$key);

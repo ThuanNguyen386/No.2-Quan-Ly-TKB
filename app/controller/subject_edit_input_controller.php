@@ -15,6 +15,7 @@ if(!isset($_SESSION['confirm'])){
     $school_year =  explode(', ',$subjectObject['school_year']);
     $description =  $subjectObject['description'];
     $browser_text =  $subjectObject['avatar'];
+    // var_dump($subjectObject);
     $src = '../../web/avatar/'.$browser_text;
 } else {
     $val_subject =  $_SESSION['subject'];
