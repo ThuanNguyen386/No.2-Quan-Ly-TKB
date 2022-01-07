@@ -14,8 +14,8 @@ $degree = ['001'=>"Cử nhân",'002'=>"Thạc sỹ",'003'=>"Tiến sỹ",'004'=>
 		}else{
         $query = "SELECT * FROM `teachers` WHERE (teachers.name LIKE '%".$str."%' OR teachers.description LIKE '%".$str."%' OR teachers.degree LIKE '%".$str."%') AND teachers.specialized ='".$spec."'";
   		}
-        global $pdo;
-        $statement = $pdo -> prepare($query) ;
+        global $conn;
+        $statement = $conn -> prepare($query) ;
         $statement -> execute();
         $search_teacher = [];
         foreach ($statement as $row ) {
@@ -33,8 +33,8 @@ $degree = ['001'=>"Cử nhân",'002'=>"Thạc sỹ",'003'=>"Tiến sỹ",'004'=>
     function deleteTeacher($id,$str,$spec){
     	$i = (string) $id;
     	$query = "DELETE FROM `teachers` WHERE teachers.id = ".$i;
-    	global $pdo;
-    	$pdo->exec($query);
+    	global $conn;
+    	$conn->exec($query);
     	header("Location: ../view/search_teacher.php?spec=".$spec."&str=".$str);
     }
     //////////--tham dinh--//////////////////
