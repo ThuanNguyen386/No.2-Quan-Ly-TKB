@@ -10,6 +10,9 @@
 	<?php
 		session_start();
 		require('../controller/subjects_search_controller.php');
+		if($_SESSION['loggedIn'] != 1){
+			header("Location: ../view/login.php");
+		}
 	?>
 <!--controller-->
 
@@ -93,7 +96,7 @@
 								<?php } ?>
 						</table>
 						<div class="element">
-							<a href="../view/home.php"><?php $_SESSION['loggedIn'] = 1?>Home</a>
+							<a href="../view/home.php">Home</a>
 						</div>
 					</div>
 				</div>

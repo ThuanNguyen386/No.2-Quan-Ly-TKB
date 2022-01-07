@@ -2,6 +2,7 @@
 <?php
 	session_start();
 	require '../controller/login.php';
+	require '../controller/home.php';
 	if($_SESSION['loggedIn'] != 1){
 		header("Location: ../view/login.php");
 	}
@@ -48,7 +49,7 @@
                     <a href="../view/password_reset.php">Reset password</a>
                 </div>
                 <div class="element">
-                    <a href="../view/login.php"><?php $_SESSION['loggedIn'] = 0 ?>Đăng xuất</a>
+                    <form method="POST"><button type="submit" class="btn-submit" name= "login-submit">Đăng xuất</button></form>
                 </div>
             </div>
         </div>
