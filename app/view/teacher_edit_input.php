@@ -1,9 +1,12 @@
 <?php
-require_once '../../../app/common/define.php';
-require_once '../../../app/model/teacher.php';
-require_once '../../../app/common/connectdb.php';
+require_once '../common/define.php';
+require_once '../model/teacher.php';
+require_once '../common/connectdb.php';
 session_start();
 
+if($_SESSION['loggedIn'] != 1){
+	header("Location: ../view/login.php");
+}
 $id = $_GET['id'];
 $_SESSION["teacher_id"] = $id;
 $teacher = getTeacherById($id);
@@ -42,11 +45,11 @@ $teacher_avatar_error = $_SESSION["teacher_avatar_error"] ?? '';
 <html>
 
 <head>
-    <link rel="stylesheet" href="../../../web/css/teacher_edit_styles.css">
-    <script src="../../../web/js/teacher_edit_scripts.js"></script>
+    <link rel="stylesheet" href="../../web/css/teacher_edit_styles.css">
+    <script src="../../web/js/teacher_edit_scripts.js"></script>
 </head>
 
-<form method='post' action='../../../app/controller/teacher_edit/teacher_edit_input_C.php' enctype="multipart/form-data">
+<form method='post' action='../../app/controller/teacher_edit_input.php' enctype="multipart/form-data">
     <div class="edit_form">
         <div class="error_message">
             <?php echo $teacher_name_error; ?>

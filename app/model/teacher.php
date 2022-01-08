@@ -1,7 +1,7 @@
 <?php 
 
 //////////--tham dinh--//////////////////
-require_once('../../common/connectdb.php');
+require_once('../common/connectdb.php');
 
 $specialized = ['001'=>"Khoa hoc may tinh", '002'=>"Khoa hoc du lieu", '003'=>"Hai duong hoc"];
 
