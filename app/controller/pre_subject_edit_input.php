@@ -17,20 +17,13 @@
             "browser-text"=>"Hãy chọn avatar"
             ];
 
-    if(isset($_SESSION['confirm'])) {
-        // echo "ton tai session confirm";
-        unset($_SESSION['confirm']);
-    }
-    
     if(!isset($_SESSION['confirm'])){
         $subjectObject = getSubject($_SESSION['id']);
-        // print_r($subjectObject);
         $val_subject =  $subjectObject['name'];
         $school_year =  explode(', ',$subjectObject['school_year']);
         $description =  $subjectObject['description'];
         $browser_text =  $subjectObject['avatar'];
         $src = '../../web/avatar/'.$browser_text;
-        // echo $src;
     }
     require_once '../controller/subject_edit_input_controller.php';
 ?>
