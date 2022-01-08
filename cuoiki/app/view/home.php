@@ -45,6 +45,9 @@
                     <label><a href="?router=add-subject">Thêm mới</a> </label>
                     <label><a href="?router=add-schedule">Thêm mới</a> </label>
                 </div>
+<a href="../view/edit_schedule_create.php?id=11">
+                <button type="button" class="btn-submit">Sửa</button>
+            </a>
 				<div class="element">
                     <a href="../view/password_reset.php">Reset password</a>
                 </div>
