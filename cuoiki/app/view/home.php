@@ -43,7 +43,7 @@
 					<label><a href="?router=add-teacher">Thêm mới</a> </label>
                     <label><a href="?router=add-teacher">Thêm mới</a> </label>
                     <label><a href="?router=add-subject">Thêm mới</a> </label>
-                    <label><a href="?router=add-schedule">Thêm mới</a> </label>
+                    <label><a href="schedule_add_input.php">Thêm mới</a> </label>
                 </div>
 <a href="../view/edit_schedule_create.php?id=11">
                 <button type="button" class="btn-submit">Sửa</button>
