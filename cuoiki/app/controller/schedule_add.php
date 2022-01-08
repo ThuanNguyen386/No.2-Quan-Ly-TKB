@@ -1,47 +1,41 @@
 <?php
-$school_yearErr = $subject_idErr = $teacher_idErr = $week_dayErr = $lessonErr = $notesErr  = "";
-$school_yearTr = $subject_idTr = $teacher_idTr = $week_dayTr = $lessonTr = $notesTr =  "";
-
-
-if (isset($_POST['btnAdd'])) {
-
-    if ($_POST['school_year'] == "none") {
-        $school_yearErr = "Hãy chọn năm học";
-    } else {
-        $school_yearTr = ($_POST["school_year"]);
+require_once('../model/schedule.php');
+require_once('../model/subject_schedule.php');
+require_once('../model/teacher.php');
+if(!isset($_SESSION)) {
+        @ob_start();
+        session_start();
     }
-
-    if ($_POST['subject_id'] == "none") {
-        $subject_idErr = "Hãy chọn môn học";
-    } else {
-        $subject_idTr = ($_POST["subject_id"]);
-    }
-    if ($_POST['teacher_id'] == "none") {
-        $teacher_idErr = "Hãy chọn giáo viên";
-    } else {
-        $teacher_idTr = ($_POST["teacher_id"]);
-    }
-
-    if ($_POST['week_day'] == "none") {
-        $week_dayErr = "Hãy chọn ngày học";
-    } else {
-        $week_dayTr = ($_POST["week_day"]);
-    }
-    /* if ($_POST['lesson'] == "none") {
-        $lessonErr = "Hãy chọn tiết học";
-    } else {
-        $lessonTr = ($_POST["lesson"]);
-    } */
-
-    if (trim($_POST['notes']) == "") {
-        $notesErr = "Hãy nhập chú ý";
-    } else if (strlen(trim($_POST['notes'])) > 300) {
-        $notesErr = 'Nhập không quá 300 ký tự';
-    } else {
-        $notesTr = trim($_POST['notes']);
-    }
-
-    if ($school_yearTr != "" && $subject_idTr != "" && $teacher_idTr != "" && $week_dayTr != "" && $lessonTr != "" && $notesTr !=  "") {
-        header("Location: ../view/schedule_add_confirm.php?school_year=$school_yearTr&subject_id=$subject_idTr&teacher_id=$teacher_idTr&week_day=$week_dayTr&lesson=$lessonTr&notes=$notesTr");
-    }
-}
+$_SESSION['add-schedule'] = '';
+        if(isset($_REQUEST['confirm'])){
+            if(empty($_REQUEST['khoa-hoc'])){
+                $_SESSION['add-schedule']="Hãy chọn khóa học";
+            }
+            else if(empty($_REQUEST['subject'])){
+                $_SESSION['add-schedule']="Hãy chọn môn học";
+            }
+            else if(empty($_REQUEST['teacher'])){
+                $_SESSION['add-schedule']="Hãy chọn giáo viên";
+            }
+            else if(empty($_REQUEST['day'])){
+                $_SESSION['add-schedule']="Hãy chọn thứ";
+            }
+            else if(empty($_REQUEST['tiethoc'])){
+                $_SESSION['add-schedule']="Hãy chọn tiết học";
+            }
+            else if(empty(trim($_REQUEST['description']))){
+                $_SESSION['add-schedule']="Hãy nhập chú ý";
+            }
+            else{
+                $khoa = $_REQUEST['khoa-hoc'];
+                $subject = $_REQUEST['subject'];
+                $teacher = $_REQUEST['teacher'];
+                $day = $_REQUEST['day'];
+                $lesson = $_REQUEST['tiethoc'];
+                $description = $_REQUEST['description'];
+                $_SESSION['add-schedule'] =[$khoa, $subject,  $teacher, $day , $lesson, $description];
+                header('location: schedule_add_confirm.php');
+            }
+        }
+$allSubject = searchAllSubject();
+$allTeacher = searchAllTeacher();
