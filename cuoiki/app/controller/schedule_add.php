@@ -1,6 +1,6 @@
 <?php
-$school_yearErr = $subject_idErr = $teacher_idErr = $week_dayErr = $lessionErr = $notesErr  = "";
-$school_yearTr = $subject_idTr = $teacher_idTr = $week_dayTr = $lessionTr = $notesTr =  "";
+$school_yearErr = $subject_idErr = $teacher_idErr = $week_dayErr = $lessonErr = $notesErr  = "";
+$school_yearTr = $subject_idTr = $teacher_idTr = $week_dayTr = $lessonTr = $notesTr =  "";
 
 
 if (isset($_POST['btnAdd'])) {
@@ -27,11 +27,11 @@ if (isset($_POST['btnAdd'])) {
     } else {
         $week_dayTr = ($_POST["week_day"]);
     }
-    if ($_POST['lession'] == "none") {
-        $lessionErr = "Hãy chọn tiết học";
+    /* if ($_POST['lesson'] == "none") {
+        $lessonErr = "Hãy chọn tiết học";
     } else {
-        $lessionTr = ($_POST["lession"]);
-    }
+        $lessonTr = ($_POST["lesson"]);
+    } */
 
     if (trim($_POST['notes']) == "") {
         $notesErr = "Hãy nhập chú ý";
@@ -41,7 +41,7 @@ if (isset($_POST['btnAdd'])) {
         $notesTr = trim($_POST['notes']);
     }
 
-    if ($school_yearTr != "" && $subject_idTr != "" && $teacher_idTr != "" && $week_dayTr != "" && $lessionTr != "" && $notesTr !=  "") {
-        header("Location: ../view/schedule_add_confirm.php?school_year=$school_yearTr&subject_id=$subject_idTr&teacher_id=$teacher_idTr&week_day=$week_dayTr&lession=$lessionTr&notes=$notesTr");
+    if ($school_yearTr != "" && $subject_idTr != "" && $teacher_idTr != "" && $week_dayTr != "" && $lessonTr != "" && $notesTr !=  "") {
+        header("Location: ../view/schedule_add_confirm.php?school_year=$school_yearTr&subject_id=$subject_idTr&teacher_id=$teacher_idTr&week_day=$week_dayTr&lesson=$lessonTr&notes=$notesTr");
     }
 }

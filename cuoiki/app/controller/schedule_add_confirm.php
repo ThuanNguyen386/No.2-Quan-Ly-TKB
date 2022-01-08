@@ -5,7 +5,7 @@ $subject_id = $_GET['subject_id'];
 $teacher_id = $_GET['teacher_id'];
 $week_day = $_GET['week_day'];
 $notes = $_GET['notes'];
-$lession = $_GET['lession'];
+$lesson = $_GET['lesson'];
 date_default_timezone_set("Asia/Bangkok");
 $created = date("Y-m-d h:i:s");
 $loading = 0;
@@ -13,7 +13,7 @@ $loading = 0;
 if (isset($_POST['btnAdd'])) {
     $loading += 1;
     if ($loading == 1) {
-        add($school_year, $subject_id, $teacher_id, $week_day, $lession, $notes, $created);
+        add($school_year, $subject_id, $teacher_id, $week_day, $lesson, $notes, $created);
         router();
     }
 }

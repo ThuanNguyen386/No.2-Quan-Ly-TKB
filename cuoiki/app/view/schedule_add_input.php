@@ -98,7 +98,7 @@ require '../model/schedule.php';
                 <div class="col-sm-9">
                     <?php for ($i = 1; $i <= 10; $i++) { ?>
                         <p class="col-sm-3" for="" style="width: 20px;padding: 0px;"> Tiết <?php echo $i ?> </p>
-                        <input class="col-sm-1" id="" type="checkbox" name="lession" value=<?php echo $i ?> style="width: 20px;">
+                        <input class="col-sm-1" id="" type="checkbox" name="lesson" value=<?php echo $i ?> style="width: 20px;">
                     <?php  } ?>
 
                 </div>

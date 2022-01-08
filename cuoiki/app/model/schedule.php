@@ -23,15 +23,15 @@ foreach ($sqlSubject as $row) {
     $search_sub[] = array($id, $name);
 }
 
-function add($school_year, $subject_id, $teacher_id, $week_day, $lession, $notes, $created)
+function add($school_year, $subject_id, $teacher_id, $week_day, $lesson, $notes, $created)
 {
     global $conn;
     if (
         $school_year != "" && $subject_id != "" && $teacher_id != "" && $week_day != ""
-        && $lession != "" && $notes != "" && $created !=  ""
+        && $lesson != "" && $notes != "" && $created !=  ""
     ) {
         $sql = "INSERT INTO `schedules`(`school_year`, `subject_id`,`teacher_id`,`week_day`,`lession`,`notes`,`created`)
-         VALUES ('$school_year','$subject_id','$teacher_id','$week_day','$lession','$notes','$created')";
+         VALUES ('$school_year','$subject_id','$teacher_id','$week_day','$lesson','$notes','$created')";
         $success = $conn->prepare($sql);
         $success->execute();
     };
