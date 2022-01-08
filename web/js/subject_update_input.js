@@ -4,34 +4,6 @@ $(document).ready(function() {
         placeholder: ''
     });
 
-    // $('input[type="file"]').change(function(e) {
-    //     var geekss = e.target.files[0].name;
-    //     $('#browser-text').val(geekss);
-        // $('#tmp').val(URL.createObjectURL(e.target.files[0]));
-    // });
-
-    // $('body').onchange(function() {
-    //     var img = new Image();
-    //     img.src = localStorage.theImage;
-    //     $('#avatar').attr('src', img.src);
-    // });
-
-    // $('input[type="file"]').change(function(e) {
-    //     if (this.files && this.files[0]) {
-    //         if(this.files.length>0) {
-    //             var reader = new FileReader();
-    //             reader.onload = function (e) {
-    //                 // var img = new Image();
-    //                 // img.src = reader.result;
-    //                 // localStorage.theImage = reader.result;
-    //                 $('#tmp').val(e.target.result);
-    //                 $('#avatar').attr('src', e.target.result);
-    //             }
-    //             reader.readAsDataURL(this.files[0]);
-    //         }
-    //     }
-    // });
-
     var numFile = 0;
     $('input[type="file"]').on("change", function(e) {
         var target = e.target || e.srcElement;
