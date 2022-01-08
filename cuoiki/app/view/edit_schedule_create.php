@@ -70,54 +70,88 @@
                     <label for="list_lesson">Tiết học</label>
                     <ul id="list_lesson">
                         <li class="item_lesson">
-                            <input id="tiet-hoc-1" type="checkbox" name="tiethoc[]" value="1">
+                            <input
+                             id="tiet-hoc-1"
+                            type="checkbox" 
+                            <?php
+                             if (in_array("1", $content)) {echo ' checked';}
+                              ?>
+                            name="tiethoc[]" 
+                            value="1">
                             <label for="tiet-hoc-1">Tiết 1</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-2" type="checkbox" name="tiethoc[]" value="2">
+                            <input id="tiet-hoc-2" <?php
+                             if (in_array("2", $content)) {echo ' checked';}
+                              ?> type="checkbox" name="tiethoc[]" value="2">
                             <label for="tiet-hoc-2">Tiết 2</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-3" type="checkbox" name="tiethoc[]" value="3">
+                            <input id="tiet-hoc-3" <?php
+                             if (in_array("3", $content)) {echo ' checked';}
+                              ?> type="checkbox" name="tiethoc[]" value="3">
                             <label for="tiet-hoc-3">Tiết 3</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-4" type="checkbox" name="tiethoc[]" value="4">
+                            <input id="tiet-hoc-4" <?php
+                             if (in_array("4", $content)) {echo ' checked';}
+                              ?> type="checkbox" name="tiethoc[]" value="4">
                             <label for="tiet-hoc-4">Tiết 4</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-5" type="checkbox" name="tiethoc[]" value="5">
+                            <input id="tiet-hoc-5" 
+                            <?php
+                             if (in_array("5", $content)) {echo ' checked';}
+                              ?>
+                             type="checkbox" name="tiethoc[]" value="5">
                             <label for="tiet-hoc-5">Tiết 5</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-6" type="checkbox" name="tiethoc[]" value="6">
+                            <input id="tiet-hoc-6" <?php
+                             if (in_array("6", $content)) {echo ' checked';}
+                              ?> type="checkbox" name="tiethoc[]" value="6">
                             <label for="tiet-hoc-6">Tiết 6</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-7" type="checkbox" name="tiethoc[]" value="7">
+                            <input id="tiet-hoc-7" 
+                            <?php
+                             if (in_array("7", $content)) {echo ' checked';}
+                              ?>
+                             type="checkbox" name="tiethoc[]" value="7">
                             <label for="tiet-hoc-7">Tiết 7</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-8" type="checkbox" name="tiethoc[]" value="8">
+                            <input id="tiet-hoc-8" 
+                            <?php
+                             if (in_array("8", $content)) {echo ' checked';}
+                              ?>
+                               type="checkbox" name="tiethoc[]" value="8">
                             <label for="tiet-hoc-8">Tiết 8</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-9" type="checkbox" name="tiethoc[]" value="9">
+                            <input id="tiet-hoc-9" 
+                            <?php
+                             if (in_array("9", $content)) {echo ' checked';}
+                              ?>
+                             type="checkbox" name="tiethoc[]" value="9">
                             <label for="tiet-hoc-9">Tiết 9</label>
                         </li>
                         <li class="item_lesson">
-                            <input id="tiet-hoc-10" type="checkbox" name="tiethoc[]" value="10">
+                            <input id="tiet-hoc-10"
+                            <?php
+                             if (in_array("10", $content)) {echo ' checked';}
+                              ?>
+                             type="checkbox" name="tiethoc[]" value="10">
                             <label for="tiet-hoc-10">Tiết 10</label>
                         </li>
                     </ul>
                 </div>
                 <div class="element">
                     <label for="description">Chú ý</label>
-                    <textarea name="description" id="description" cols="30" rows="3"><?php echo $schedule['notes'];?></textarea>
+                    <textarea name="description" id="description" cols="30" rows="3"><?php echo $contentNote;?></textarea>
                 </div>
                 <div class="element">
                     <button type="submit" class="btn-submit" name= "confirm" >Xác nhận</button>
-                    <!-- <a href="?router=edit-schedule-confirm">Xác nhận</a> -->
                 </div>
                 <div class="element">
                     <a href="?router=home">Trở về trang chủ</a>

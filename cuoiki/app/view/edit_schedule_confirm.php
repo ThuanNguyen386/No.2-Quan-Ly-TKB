@@ -53,7 +53,7 @@
                     <button type="submit" class="btn-submit" name="edit-new-schedule">Đăng kí</button>
                 </div>
                 <div class="element">
-                    <a href="?router=home">Trở về trang chủ</a>
+                    <a href="../view/home.php">Trở về trang chủ</a>
                 </div>
             </div>
         </form>

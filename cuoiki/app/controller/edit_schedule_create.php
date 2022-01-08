@@ -2,7 +2,10 @@
 require_once('../model/schedule.php');
 require_once('../model/subject_schedule.php');
 require_once('../model/teacher.php');
-
+if(!isset($_SESSION)) {
+        @ob_start();
+        session_start();
+    }
 $_SESSION['edit-schedule'] = '';
         if(isset($_REQUEST['confirm'])){
             if(empty($_REQUEST['khoa-hoc'])){
@@ -43,4 +46,15 @@ if ($id) {
 }
 
 $schedule = get($id);
+
+
+
+$file = $schedule['lesson'] ?? null;
+$note = $schedule['notes'] ?? null;
+$path = '../../web/file/lesson/' . $file;
+$pathNote = '../../web/file/note/' . $note;
+
+$content = file_get_contents($path);
+$content = preg_split('/\n/', trim($content));
+$contentNote = file_get_contents($pathNote);
 ?>

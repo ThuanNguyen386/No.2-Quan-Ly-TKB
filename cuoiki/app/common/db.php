@@ -2,9 +2,10 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+$DB ='manage_timetable';
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=root; charset=UTF8", $username, $password);
+  $conn = new PDO("mysql:host=$servername;dbname=$DB; charset=UTF8", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $status = 1;

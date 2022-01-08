@@ -10,15 +10,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" class="form">
-        <div class="content">
+        <?php require_once '../controller/edit_schedule_complete.php'; ?>
+
+    <div class="content" style="width: 100 ; height: 100; background-color: 'red'; ">
         <?php   
             $result= isset($_SESSION['edit-schedule-complete-notifi']) ? $_SESSION['edit-schedule-complete-notifi'] :''  ;
             echo $result;
         ?>
-        <a href="?router=home" class="notification">Trở lại trang chủ</a>
+        <a href="../view/home.php" class="notification">Trở lại trang chủ</a>
         </div>
-    </form>
     
 </body>
 </html>
