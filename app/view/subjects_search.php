@@ -86,7 +86,7 @@
 												<a onclick="return confirm('Bạn chắc chắn muốn xoá môn <?php echo $subjects['name']?>?')" style="text-decoration:none;" href="../controller/subjects_delete_controller.php?id=<?php echo $subjects['id'] ?>">Xóa</a></button>
 												
 												<button style="background-color: #99CCFF; border: 1px solid #0078ED;  margin-right: 5px; cursor: pointer;">
-												<a style="text-decoration:none;" href="../controller/subject_edit_controller.php?id=<?= $id?>">Sửa</a></button>
+												<a style="text-decoration:none;" href="subject_edit_input.php?id=<?= $id?>">Sửa</a></button>
 											</td>
 										</tr>
 								<?php } ?>

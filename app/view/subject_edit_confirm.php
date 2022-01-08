@@ -1,3 +1,10 @@
+<?php 
+if(!isset($_SESSION)) {
+    @ob_start();
+    session_start();
+}
+include "../controller/subject_edit_confirm_controller.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,14 +19,15 @@
     <body>
         <div id="container" class="border">
             <div id="content">
-                <form action="../controller/subject_optionConfirm_controller.php" method="post" enctype="multipart/form-data">
+                <!-- <form action="../controller/subject_edit_complete_controller.php" method="post" enctype="multipart/form-data"> -->
+                <form action="" method="post" enctype="multipart/form-data">
                     <!-- Ten mon hoc -->
                     <div class="row">
                         <div class="col-25">
                             <label for="subject">Tên môn học</label>
                         </div>
                         <div class="col-75 pad-right">
-                            <label id="subject" name="subject" class="border "><?php echo $subject ?></label>
+                            <label id="subject" name="subject" class="border "><?php echo $_SESSION['subject'] ?></label>
                         </div>
                     </div>
 
@@ -32,10 +40,8 @@
                             <label id="school_year" name="school_year" class="border">
                             <?php
                                     $content = "";
-                                    foreach($school_year as $code) {
-                                        if(array_key_exists($code, $school_years)) {
-                                            $content .= $school_years[$code].", ";
-                                        }
+                                    foreach($_SESSION['school_year'] as $code) {
+                                            $content .= "Năm ".$code.", ";
                                     }
                                     echo rtrim(trim($content),",");
                             ?>
@@ -49,7 +55,7 @@
                             <label for="description">Mô tả chi tiết</label>
                         </div>
                         <div class="col-75">
-                            <label id="description" name="description" class="txt-area border"><?php echo $description ?></label>
+                            <label id="description" name="description" class="txt-area border"><?php echo $_SESSION['description'] ?></label>
                         </div>
                     </div>
                     
@@ -59,7 +65,7 @@
                             <label for="avatar">Avatar</label>
                         </div>
                         <div class="col-75">
-                            <img src="<?php echo $src ?>" id="avatar" data-name="avatar" class="avt-area border mrg-top">
+                            <img src="<?php echo $_SESSION['target_file'] ?>" id="avatar" data-name="avatar" class="avt-area border mrg-top">
                         </div>
                     </div>
 

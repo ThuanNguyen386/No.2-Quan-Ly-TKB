@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION)) {
+  @ob_start();
+  session_start();
+}
 
 $target_dir = "../../web/avatar/tmp/";
 $target_file = $target_dir . basename($_FILES["browser"]["name"]);
@@ -20,7 +24,6 @@ if(isset($_POST["submit"])) {
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  // echo "Sorry, file already exists.";
   $uploadOk = 1;  // allow to save again the file already exists
 }
 
@@ -30,9 +33,16 @@ if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
 } else {
   if (move_uploaded_file($_FILES["browser"]["tmp_name"], $target_file)) {
-    // echo "The file ". htmlspecialchars( basename( $_FILES["browser"]["name"])). " has been uploaded.";
     $_SESSION['target_file'] = $target_file;
-    header("Location: subject_confirm_controller.php");
+    $school_years = [1=>"Năm 1", 2=>"Năm 2", 3=>"Năm 3", 4=>"Năm 4"];
+    $subject =  $_SESSION['subject'];
+    $school_year =  $_SESSION['school_year'];
+    $description =  $_SESSION['description'];
+    $avatar =  $_SESSION['browser-text'];
+    $src = $_SESSION['target_file'];
+    $_SESSION['confirm'] = 1;
+
+    header('location: ../view/subject_edit_confirm.php');
   } else {
     echo "Sorry, there was an error uploading your file.";
   }

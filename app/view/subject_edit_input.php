@@ -1,3 +1,4 @@
+<?php include '../controller/pre_subject_edit_input.php' ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,14 +13,13 @@
         <script src="../../web/js/jquery.multiselect.js"></script>
         <script src="../../web/js/subject_update_input.js"></script>
 
-        <link rel="stylesheet" href="../../web/css/responsive.css">
         <link rel="stylesheet" href="../../web/css/jquery.multiselect.css">
     </head>
 
     <body>
         <div id="container" class="border">
             <div id="content">
-                <form action="../controller/subject_edit_confirm_controller.php" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data">
                     <!-- Ten mon hoc -->
                     <div class="row">
                         <div class="col-25">
