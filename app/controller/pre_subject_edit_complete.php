@@ -20,7 +20,7 @@
         echo "File can't be moved!";  
     }  
     else {  
-        echo "File has been moved!";  
+        // echo "File has been moved!";  
         // check if uploaded-file name and old-file name is NOT the same
         if(strcmp($old_avatar, $_SESSION['browser-text'])!=0){     
             echo 'loi 1';
@@ -34,6 +34,7 @@
                 echo "File does not exists"; 
             }
         } 
+        header('location: ../view/subject_edit_complete.php');
         unset($_SESSION['confirm']);
     }
 ?>
